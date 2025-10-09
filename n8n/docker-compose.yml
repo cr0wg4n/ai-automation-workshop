@@ -8,9 +8,9 @@ services:
     environment:
       - N8N_HOST=localhost
       - N8N_PORT=5678
-      - WEBHOOK_URL=http://localhost/
+      - WEBHOOK_URL=http://localhost:5678/
     volumes:
       - n8n_data:/home/node/.n8n
-      
+
 volumes:
   n8n_data:
