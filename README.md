@@ -1,5 +1,11 @@
 # Taller de Automatización con IA
 
+## 📑 Presentaciones y Material de Apoyo
+
+Encuentra aquí las diapositivas y recursos utilizados durante el taller:
+- Diapositiva: [Del Lenguaje de Programación al Lenguaje Natural: Un Parche Obligatorio Rumbo a la 4ta Revolución Industrial](https://slides.com/cr0wg4n/del-lenguaje-de-programacion-al-lenguaje-natural-un-parche-obligatorio-rumbo-a-la-4ta-revolucion-industrial)
+
+
 ## 🗓️ Agenda del Taller
 
 1. **LLMs: Definición, uso y comparativa**
