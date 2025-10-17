@@ -1,3 +1,5 @@
+version: '3'
+
 services:
   n8n:
     image: docker.n8n.io/n8nio/n8n
@@ -11,6 +13,34 @@ services:
       - WEBHOOK_URL=http://localhost:5678/
     volumes:
       - n8n_data:/home/node/.n8n
+    dns: 
+      - 1.1.1.1
+      - 8.8.8.8
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - n8n-network
 
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    restart: always
+    volumes:
+      - redis_data:/data
+    ports:
+      - 6379:6379
+    networks:
+      - n8n-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 1s
+      timeout: 3s
+      
 volumes:
   n8n_data:
+  redis_data:
+
+networks:
+  n8n-network:
+    driver: bridge
