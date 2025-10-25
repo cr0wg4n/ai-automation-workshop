@@ -1,0 +1,1 @@
+Si te preguntan por temperatura o clima usa la herramienta MCP "weather" y la tool "temperature"

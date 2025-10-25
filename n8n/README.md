@@ -36,3 +36,10 @@ docker run -d \
 
 - [Documentación oficial de n8n](https://docs.n8n.io/)
 - [Comunidad n8n](https://community.n8n.io/)
+
+
+## 📋 Clipboard
+
+```
+https://api.telegram.org/bot<TELEGRAM_API_KEY>/getUpdates
+```
