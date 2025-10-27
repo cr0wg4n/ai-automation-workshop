@@ -1,0 +1,164 @@
+body {
+  background: linear-gradient(45deg, #000022, #000044);
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00;
+  font-size: 2.5em;
+  margin: 20px 0;
+  letter-spacing: 3px;
+}
+
+#gameCanvas {
+  background: #000;
+  display: block;
+  margin: 20px auto;
+  border: 3px solid #00ff00;
+  border-radius: 8px;
+  box-shadow: 
+    0 0 20px #00ff00,
+    inset 0 0 20px rgba(0, 255, 0, 0.1);
+}
+
+#ui {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#ui p {
+  margin: 0;
+  font-size: 1.2em;
+  text-shadow: 0 0 5px #ffffff;
+}
+
+#controls {
+  margin: 30px 0;
+  padding: 20px;
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid #00ff00;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 30px auto;
+}
+
+#controls h3 {
+  color: #00ff00;
+  margin: 0 0 15px 0;
+  font-size: 1.1em;
+}
+
+#controls p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+footer {
+  margin-top: auto;
+  padding: 20px;
+  color: #888;
+  font-size: 0.8em;
+}
+
+#score {
+  color: #ffff00;
+  text-shadow: 0 0 10px #ffff00;
+}
+
+#lives {
+  color: #ff4444;
+  text-shadow: 0 0 10px #ff4444;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1.1em;
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #00ff00, #00cc00);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 0, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(45deg, #00cc00, #009900);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 255, 0, 0.5);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 255, 0, 0.3);
+}
+
+/* Añadir efectos de partículas de fondo */
+@keyframes stars {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+    radial-gradient(2px 2px at 40px 70px, #fff, transparent),
+    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 130px 80px, #fff, transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: stars 4s ease-in-out infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Responsivo para dispositivos móviles */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  #gameCanvas {
+    width: 90%;
+    height: auto;
+  }
+  
+  #ui {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}

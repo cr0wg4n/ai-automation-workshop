@@ -1,0 +1,478 @@
+{
+  "name": "Fundamentals",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## Triggers ",
+        "height": 272,
+        "width": 1104,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -528,
+        -144
+      ],
+      "typeVersion": 1,
+      "id": "9140cc71-0e8d-493a-9a04-9e4af1fade17",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -336,
+        -64
+      ],
+      "id": "df587808-cde1-461e-ad8f-8f36901e68a4",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "03079393-e5af-4385-99de-1b719838def3",
+              "leftValue": "",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -512,
+        256
+      ],
+      "id": "d9096ead-6187-4efa-bdb1-c0194e71619c",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "a8c32ccd-16d5-4986-8d3a-60ad8254eb5e"
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.3,
+      "position": [
+        -304,
+        256
+      ],
+      "id": "743aa0d3-e164-4604-961d-2eb6c19dc082",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "content": "## Condicionales ",
+        "height": 272,
+        "width": 624,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -528,
+        160
+      ],
+      "typeVersion": 1,
+      "id": "1c1b6b94-e1ee-485c-9a10-e140ab7b9c0d",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.3,
+      "position": [
+        -32,
+        -64
+      ],
+      "id": "7daa27fc-0a80-4045-bf32-5810d47554c1",
+      "name": "On form submission",
+      "webhookId": "27ffe24e-de2c-4468-bb8d-2b7e9d8d0f46"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        240,
+        -64
+      ],
+      "id": "196979d2-4b29-4da0-98ce-ff1bd03992f5",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "content": "## Iteración ",
+        "height": 272,
+        "width": 448,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        128,
+        160
+      ],
+      "typeVersion": 1,
+      "id": "b9f7fe09-d7ac-4821-a69d-c0f509ef35fe",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        192,
+        224
+      ],
+      "id": "b5fc6d93-b08d-4974-9973-1078d96ae4d9",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "name": "Replace Me",
+      "typeVersion": 1,
+      "position": [
+        416,
+        240
+      ],
+      "id": "d113afe8-4e50-4a1a-811d-a37ceb76308a"
+    },
+    {
+      "parameters": {
+        "content": "## Misceláneos",
+        "height": 432,
+        "width": 1104,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -528,
+        464
+      ],
+      "typeVersion": 1,
+      "id": "b7ef804b-f3c4-4868-8db9-bac6981fd302",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -464,
+        560
+      ],
+      "id": "f34067dd-61fb-44a7-941d-069b414ceb50",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -192,
+        560
+      ],
+      "id": "e81f61ec-f11d-4628-9218-493afe26738e",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        48,
+        560
+      ],
+      "id": "cdfb20cb-2a88-4bf9-850c-a75707637939",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        304,
+        560
+      ],
+      "id": "74fe7e47-0874-436f-8368-c1300dce8699",
+      "name": "Wait",
+      "webhookId": "c3f4f44b-a117-4e0e-8169-c2917decf8ac"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop over input items and add a new field called 'myNewField' to the JSON of each one\nfor (const item of $input.all()) {\n  item.json.myNewField = 1;\n}\n\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -464,
+        736
+      ],
+      "id": "c7d5dca3-8147-4c7f-bb81-5a3a22a9363f",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        -192,
+        736
+      ],
+      "id": "b7e1b360-3dd1-4da4-aa5c-ad60bb2524bf",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "53f6c3c2-9ed7-41b6-a516-31c8aaccc053",
+              "leftValue": "",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        -112,
+        256
+      ],
+      "id": "c7e2a071-5136-4343-b568-42f3b7d949eb",
+      "name": "Filter"
+    },
+    {
+      "parameters": {
+        "keys": {
+          "key": [
+            {}
+          ]
+        },
+        "additionalOptions": {}
+      },
+      "type": "n8n-nodes-base.renameKeys",
+      "typeVersion": 1,
+      "position": [
+        48,
+        736
+      ],
+      "id": "98ac3292-37e7-463e-840a-eb87c08e16fe",
+      "name": "Rename Keys"
+    },
+    {
+      "parameters": {
+        "content": "## AI",
+        "height": 1040,
+        "width": 368,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        608,
+        -144
+      ],
+      "typeVersion": 1,
+      "id": "20670eb1-1473-4d60-89e8-58039d7c1cbe",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        656,
+        -16
+      ],
+      "id": "7f242de1-057f-45aa-b7c6-b686b6422ecf",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.7,
+      "position": [
+        656,
+        240
+      ],
+      "id": "3525276e-07e3-47ff-9b50-81c29d0bc802",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.textClassifier",
+      "typeVersion": 1.1,
+      "position": [
+        656,
+        464
+      ],
+      "id": "e1864aa6-3110-4ee3-a7a5-b0f932ea3c49",
+      "name": "Text Classifier"
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+      "typeVersion": 1.2,
+      "position": [
+        656,
+        688
+      ],
+      "id": "1808ae63-7111-4ffe-ada7-e543a8f8c355",
+      "name": "Information Extractor"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        304,
+        736
+      ],
+      "id": "571facbc-e0ea-4405-b15d-ba2a59b477af",
+      "name": "Get row(s)"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        []
+      ]
+    },
+    "If": {
+      "main": [
+        []
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Replace Me",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Replace Me": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "e709f1bc-4158-42b0-9040-564439af5781",
+  "meta": {
+    "instanceId": "8a38a47c6c0afeb48c601f33f982e99b4e6e5ced101f251338197d1975ea38b4"
+  },
+  "id": "vktXi8rtpxueKfrD",
+  "tags": []
+}

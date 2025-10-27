@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Invaders Clone - Versión Refactorizada</title>
+  <meta name="description" content="Un clon del clásico juego Space Invaders con gráficos pixel art y mecánicas mejoradas">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🚀 SPACE INVADERS 👾</h1>
+  </header>
+  
+  <main>
+    <canvas id="gameCanvas" width="480" height="640"></canvas>
+    
+    <div id="ui">
+      <div class="stats">
+        <p>Puntuación: <span id="score">0</span></p>
+        <p>Vidas: <span id="lives">3</span></p>
+      </div>
+      <button id="startBtn">🎮 Iniciar Juego</button>
+    </div>
+    
+    <div id="controls">
+      <h3>🎯 Controles:</h3>
+      <p>⬅️ ➡️ Flechas para mover</p>
+      <p>🚀 ESPACIO para disparar</p>
+    </div>
+  </main>
+  
+  <footer>
+    <p>Versión refactorizada con arquitectura modular OOP</p>
+  </footer>
+  
+  <script src="game.js"></script>
+</body>
+</html>
